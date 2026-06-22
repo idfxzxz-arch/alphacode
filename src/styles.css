@@ -2552,3 +2552,73 @@ html[data-theme='dark'] .settings-list .language-switch{
   .settings-panel{right:-43px;width:min(280px,calc(100vw - 28px))}
   .settings-panel:after{right:55px}
 }
+
+/* Mobile content-first cleanup */
+@media(max-width:700px){
+  .container{width:min(100% - 28px,1120px)}
+
+  .hero{padding:106px 0 54px}
+  .hero-grid{gap:18px}
+  .hero-copy>p{font-size:15px;line-height:1.68}
+  .hero-actions{margin-top:24px}
+  .hero-art{height:330px;margin-top:0;transform:scale(.88);transform-origin:top center}
+  .float-card,.spark,.plant{display:none}
+  .screen{top:36px}
+  .desk{bottom:42px}
+  .scroll-cue{display:none}
+
+  .section{padding:70px 0}
+  .section-divider{height:30px}
+  .section-heading h2,.about-copy h2,.faq-heading h2{margin-bottom:14px}
+
+  .service-grid{margin-top:34px;gap:14px}
+  .service-card:nth-child(n){min-height:auto;padding:21px 19px}
+  .service-card:after{display:none}
+  .service-card h3{margin-top:16px}
+
+  .about-grid{gap:26px}
+  .about-visual{min-height:310px}
+  .big-logo{width:275px;height:275px}
+  .note{display:none}
+  .about-copy ul{margin:22px 0}
+
+  .projects-heading{margin-bottom:30px}
+  .project-grid{gap:14px}
+  .project-card{padding:9px 9px 0}
+  .project-info{min-height:78px;padding:13px 6px 15px}
+
+  .steps{gap:38px;margin-top:40px}
+  .step-number{width:56px;height:56px}
+  .step h3{margin-top:18px}
+
+  .faq-layout{gap:26px}
+  .faq-mini-card{display:none}
+  .faq-grid{gap:10px}
+  .faq-item summary,.faq-item.featured summary{padding:16px 17px;font-size:14px}
+  .faq-item>p,.faq-item.featured>p{padding:0 17px 17px;font-size:13px}
+
+  .cta-section{padding:52px 0 62px}
+  .cta-card{gap:25px;padding:34px 22px}
+  .cta-doodle{display:none}
+
+  footer.simple-footer{padding-top:38px}
+  .footer-mascot{display:none}
+  .simple-footer-main{padding-bottom:25px}
+  .simple-footer-brand h3{margin-top:20px}
+  .simple-footer-socials{margin-top:20px}
+
+  .loader-rising-bubbles i:nth-child(even),.minimal-bg-sparkles i:nth-child(n+4){display:none}
+}
+
+@media(max-width:420px){
+  .navbar{height:64px}
+  .nav-links{top:70px}
+  .brand{font-size:17px}
+  .brand img{width:32px;height:32px}
+  .hero{padding-top:94px}
+  .hero-copy .eyebrow{font-size:10px}
+  .hero-copy h1{font-size:40px;letter-spacing:-2.3px}
+  .hero-art{height:300px;transform:scale(.8)}
+  .screen{top:24px}
+  .simple-footer-bottom{align-items:flex-start;flex-direction:column}
+}
