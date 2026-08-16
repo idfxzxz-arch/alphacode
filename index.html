@@ -56,5 +56,25 @@
       </div>
     </div>
     <script type="module" src="/src/main.jsx"></script>
+    <audio id="welcome-audio" src="https://www.myinstants.com/media/sounds/hey-antek-antek-asing-prabowo.mp3" preload="auto"></audio>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('welcome-audio');
+        const playPromise = audio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            const playOnInteraction = () => {
+              audio.play();
+              document.removeEventListener('click', playOnInteraction);
+              document.removeEventListener('touchstart', playOnInteraction);
+              document.removeEventListener('keydown', playOnInteraction);
+            };
+            document.addEventListener('click', playOnInteraction);
+            document.addEventListener('touchstart', playOnInteraction);
+            document.addEventListener('keydown', playOnInteraction);
+          });
+        }
+      });
+    </script>
   </body>
 </html>
